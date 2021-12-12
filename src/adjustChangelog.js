@@ -13,7 +13,7 @@ const CHANGELOG_INFO_REGEX =
 //= ===================================================================================================================//
 const handleIncorrectCommentMessage = () => {
   console.log(
-    `Your change file should provide the correct format of changelog info: /\\[[A-Z]+-[0-9]+\\]\\(https:\\/\\/jira-clovertech\\.atlassian\\.net\\/browse\\/[A-Z]+-[0-9]+\\) \\/ \\[![[0-9]+\\]\\(https:\\/\\/gitlab.dev.clover.tech\\/portal\\/portal\\/-\\/merge_requests\\/[0-9]+\\) \\/ by \\[.+\\]\\(https:\\/\\/gitlab.dev.clover.tech\\/.+\\)/`
+    `Your change file should provide the correct format of changelog info.`
   );
   process.exit(1);
 };
