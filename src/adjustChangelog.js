@@ -12,10 +12,7 @@ const CHANGELOG_INFO_REGEX =
 // Handlers
 //= ===================================================================================================================//
 const handleIncorrectCommentMessage = () => {
-  console.log(
-    `Your change file should provide the correct format of changelog info.`
-  );
-  process.exit(1);
+  throw new Error(`Your change file should provide the correct format of changelog info.`)
 };
 //= ===================================================================================================================//
 
@@ -75,8 +72,7 @@ export const adjustChangelog = async (jiraDomain, gitlabDomain, gitlabProjectRou
     if (error.toString().includes(noSuchFileError)) {
       process.exit(0);
     }
-    console.error(error);
-    process.exit(1);
+    throw new Error(error)
   }
 
   for (const file of changeFiles) {
@@ -98,6 +94,5 @@ export const adjustChangelog = async (jiraDomain, gitlabDomain, gitlabProjectRou
       console.log('Changelog info was successfully added.');
     }
   }
-  process.exit(0);
 };
 //= ===================================================================================================================//
