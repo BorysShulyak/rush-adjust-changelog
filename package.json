@@ -2,7 +2,7 @@
   "name": "rush-adjust-changelog",
   "version": "1.0.0",
   "private": true,
-  "type": 'module',
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint . --ext .jsx,.js --quiet",
